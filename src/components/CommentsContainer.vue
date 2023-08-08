@@ -50,9 +50,9 @@ import CommentsSection from './CommentsSection.vue';
 
 <template>
   <!-- Wrapper -->
-  <div class="flex w-[500px]">
+  <div class="flex w-[600px]">
     <!-- Container -->
-    <div class="bg-zinc-800 border-2 border-zinc-700 rounded-md p-8 flex flex-col gap-4">
+    <div class="bg-zinc-800 border-2 border-zinc-700 rounded-md p-8 flex flex-col gap-4 w-full">
       <CommentsCreationForm
         :comments="comments"
         @new-comment="addComment"

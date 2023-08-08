@@ -32,12 +32,12 @@
     </div>
 
     <!-- Comments -->
-    <div class="flex flex-col gap-4 max-h-[200px] overflow-y-auto">
+    <div class="flex flex-col gap-4 max-h-[350px] pr-0.5 overflow-y-auto">
       <!-- Comment -->
       <div
         v-for="comment in comments"
         :key="comment.id"
-        class="flex flex-col gap-2 bg-zinc-700 px-4 py-2 rounded-md"
+        class="flex flex-col gap-2 bg-zinc-700 p-4 rounded-md"
       >
         <!-- User Info + Date -->
         <div class="flex justify-between items-center">
@@ -50,7 +50,7 @@
         </div>
 
         <!-- Message -->
-        <p class="text-zinc-400 max-w-[426px] break-words">
+        <p class="text-zinc-400 text-justify break-words">
           {{ comment.message }}
         </p>
         <button

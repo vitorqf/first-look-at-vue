@@ -28,7 +28,6 @@ import CommentsSection from './CommentsSection.vue';
         handler() {
           localStorage.setItem('comments', JSON.stringify(this.comments));
         },
-        deep: true
       }
     },
     mounted() {

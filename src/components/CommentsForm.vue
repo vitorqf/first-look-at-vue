@@ -11,9 +11,6 @@ import CommentsSection from './CommentsSection.vue';
         };
     },
     computed: {
-        commentsCount() {
-            return this.comments.length;
-        },
         handleCommentsDefaultName() {
             return this.comments.map(comment => {
                 if (!comment.name) {
@@ -21,11 +18,28 @@ import CommentsSection from './CommentsSection.vue';
                 }
                 return comment;
             });
+        },
+        reversedComments() {
+            return this.handleCommentsDefaultName.slice().reverse();
         }
+    },
+    watch: {
+      comments: {
+        handler() {
+          localStorage.setItem('comments', JSON.stringify(this.comments));
+        },
+        deep: true
+      }
+    },
+    mounted() {
+      if (localStorage.getItem('comments')) {
+        this.comments = JSON.parse(localStorage.getItem('comments'));
+      }
     },
     methods: {
       addComment(comment) {
         this.comments.push(comment);
+
       },
       removeComment(id) {
         this.comments = this.comments.filter(comment => comment.id !== id);
@@ -45,7 +59,7 @@ import CommentsSection from './CommentsSection.vue';
       />
 
       <CommentsSection
-        :comments="handleCommentsDefaultName"
+        :comments="reversedComments"
         @remove-comment="removeComment"
       />
     </div>

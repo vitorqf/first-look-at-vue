@@ -12,7 +12,6 @@
         this.$emit('remove-comment', id)
       }
     },
-    
   }
 </script>
 
@@ -26,15 +25,9 @@
       </h2>
       <p
         v-if="comments.length == 0"
-        class="text-zinc-400 text-sm"
+        class="text-zinc-400"
       >
-        No comments yet
-      </p>
-      <p
-        v-else
-        class="text-zinc-400 text-sm"
-      >
-        Comments: {{ commentsCount }}
+        No comments yet.
       </p>
     </div>
 

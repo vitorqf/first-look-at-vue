@@ -32,7 +32,13 @@
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {},
+    "overrides": [
+      {
+        "files": ["*.vue"],
+        "processor": "vue/.vue"
+      }
+    ]
   },
   "browserslist": [
     "> 1%",

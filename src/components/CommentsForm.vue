@@ -46,7 +46,8 @@
         <!-- Header Section -->
         <div class="flex flex-col gap-1 mb-2">
           <h2 class="text-2xl font-semibold">Comments</h2>
-          <p class="text-zinc-400 text-sm">Total: {{ commentsCount }}</p>
+          <p v-if="comments.length == 0" class="text-zinc-400 text-sm">Nenhum comentário.</p>
+          <p v-else class="text-zinc-400 text-sm">Total: {{ commentsCount }}</p>
         </div>
 
         <!-- Comments -->

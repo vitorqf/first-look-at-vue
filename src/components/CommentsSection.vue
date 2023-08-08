@@ -37,7 +37,7 @@
       <div
         v-for="comment in comments"
         :key="comment.id"
-        class="flex flex-col gap-2 bg-zinc-700 p-4 rounded-md"
+        class="flex flex-col gap-2 bg-zinc-800 border-2 border-zinc-700 p-4 rounded-md"
       >
         <!-- User Info + Date -->
         <div class="flex justify-between items-center">

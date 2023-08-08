@@ -82,7 +82,7 @@
 
     <!-- Submit Button -->
     <button
-      class="tracking-wider uppercase py-2 px-4 rounded bg-blue-500"
+      class="tracking-wider uppercase py-2 px-4 rounded bg-blue-500 hover:bg-blue-600"
       @click="createNewComment"
     >
       Submit

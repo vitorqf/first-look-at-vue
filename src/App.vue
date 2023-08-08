@@ -1,17 +1,17 @@
 <script>
-import CommentsSection from './components/CommentsSection';
+import CommentsForm from './components/CommentsForm';
 
 export default {
   name: 'App',
   components: {
-    CommentsSection
+    CommentsForm
   }
 }
 </script>
 
 <template>
   <div class="flex justify-center items-center bg-zinc-900 text-zinc-100 min-h-screen">
-    <CommentsSection />
+    <CommentsForm />
   </div>
 </template>
 

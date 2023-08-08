@@ -26,16 +26,17 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/vue3-essential",
+      "plugin:vue/recommended",
       "eslint:recommended"
     ],
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {},
     "overrides": [
       {
-        "files": ["*.vue"],
+        "files": [
+          "*.vue"
+        ],
         "processor": "vue/.vue"
       }
     ]

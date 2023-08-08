@@ -62,6 +62,15 @@ import CommentsSection from './CommentsSection.vue';
         :comments="reversedComments"
         @remove-comment="removeComment"
       />
+
+      <footer class="self-center text-zinc-400">
+        Designed by <a
+          target="_blank"
+          referrerpolicy="no-referrer"
+          href="https://vitorrafael.com.br"
+          class="underline text-white underline-offset-4"
+        >Vitor</a>
+      </footer>
     </div>
   </div>
 </template>
